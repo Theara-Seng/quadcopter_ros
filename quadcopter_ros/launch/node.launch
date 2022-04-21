@@ -1,0 +1,8 @@
+<launch>
+   <!-- <include file="$(find quadcopter_ros/launch/waypoint.launch"></include> -->
+   <include file="$(find airsim_ros_pkgs)/launch/airsim_node.launch"></include>
+   <include file="$(find airsim_ros_pkgs)/launch/rviz.launch"></include>
+   <node name="odom" pkg="quadcopter_ros" type="quadcopter_odometry.py" output="screen"></node>
+   <node name="trajectory" pkg="quadcopter_ros" type="quadcopter_mpc.py" output="screen"></node>
+   <node name="data_plot" pkg="quadcopter_ros" type="quadcopter_dataPlot.py" output="screen"></node>
+</launch>
