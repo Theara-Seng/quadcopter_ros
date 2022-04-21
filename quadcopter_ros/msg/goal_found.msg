@@ -1,0 +1,1 @@
+bool goal_found
